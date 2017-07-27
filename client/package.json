@@ -1,0 +1,38 @@
+{
+  "name": "Terminology-Client",
+  "version": "1.0.0",
+  "description": "Client Side Code Base",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "css",
+    "terminology"
+  ],
+  "author": "Deepak Puttarangaswamy",
+  "license": "ISC",
+  "dependencies": {
+    "angular-file-upload": "^2.3.4",
+    "child_process": "^1.0.2",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-webpack": "^1.0.11",
+    "image-webpack-loader": "^1.6.3",
+    "moment": "^2.16.0",
+    "node-sass": "^3.4.2",
+    "sass": "^0.5.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.15",
+    "webpack-dev-server": "^1.15.0"
+  }
+}

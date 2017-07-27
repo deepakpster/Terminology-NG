@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Terminology Upload</strong>
+    </div>
+    <div class="panel-body">
+        <strong>Instruction</strong>
+        <p>
+            1. Download terminology .xls file from the website</br>
+            2. Change the column name appropriately as mentioned in the <a href="./SDTM Terminology.xlsx" target="_blank">sample</a> .xlsx terminology file.</br>
+            3. Save and upload </br>
+        </p>
+        <form ng-submit="upload()" name="uploader" class="uploader" encType="multipart/form-data">
+            <div class="form">
+                <div class="form-group">
+                    <fieldset>
+                        <input ref="file" type="file" name="file" ng-model="terminology.file" class="upload-file"></input>
+                    </fieldset>
+                </div>
+                <button class="btn btn-sm btn-primary" type="submit" ref="button" value="Upload">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>

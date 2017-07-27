@@ -1,0 +1,27 @@
+<div class="panel panel-default widget-container" ng-init="initFirst()">
+    <div class="panel-heading"><strong>Widgets</strong> <small>stats and shortcuts</small></div>
+    <div class="panel-body row-fluid">
+        <div class="col-md-4" ng-repeat="(key, value) in widgets">
+            <div class="panel-{{value.panelCls}}">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa {{value.iconCls}} fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><strong>{{value.count}}</strong></div>
+                            <div><strong>{{key}}</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <a ui-sref="app.widget({group: key})">
+                    <div class="panel-footer">
+                        <span class="pull-left">Read Me</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

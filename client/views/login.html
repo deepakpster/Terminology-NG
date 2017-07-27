@@ -1,0 +1,25 @@
+<section class="login">
+    <header>
+        <nav class="cf" ng-include="'views/nav.html'"></nav>
+    </header>
+    <div class="card">
+        <form name="myform" ng-submit="login()" novalidate>
+            <div class="textintro">
+                <h1>Log In</h1>
+                <p>Log-in to access the awesomeness!</p>
+                <p class="message" ng-show="message"> {{ message }}</p>
+            </div>
+            <fieldset>
+                <input name="username" placeholder="Username" ng-model="user.username" ng-required="true">
+                <p class="error validationerror" ng-show="myform.username.$invalid && myform.username.$touched">
+                    Username is required</p>
+                <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+                <p class="error validationerror" ng-show="myform.password.$invalid && myform.email.$touched">
+                    Password is required</p>
+            </fieldset>
+            <button type="submit" class="btn" ng-disabled="myform.$invalid">Login</button>
+            <p>or <a ng-href="#/register">register</a></p>
+            <a ng-click="logout()" href="">Logout</a>
+        </form>
+    </div>
+</section>

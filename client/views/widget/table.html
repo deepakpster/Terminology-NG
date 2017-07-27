@@ -1,0 +1,41 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row-fluid">
+            <ol class="breadcrumb">
+                <li><a href="#/dashboard">Home</a></li>
+                <li><a href="#/dashboard">Widget</a></li>
+                <li class="active"><strong>{{group}}</strong></li>
+            </ol>
+        </div>
+        <div class="row-fluid">
+            <strong>{{tableParams.data.description}}</strong></br>
+        </div>
+        <div class="table-responsive">
+            <table ng-table="tableParams" class="table table-condensed table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cl in $data.data">
+                        <td>{{ cl.column }}</td>
+                        <td>{{ cl.description }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-show="tableParams.settings().$loading" class="container-fluid">
+            <div class="row-fluid">
+                <div class="col-md-6 col-md-offset-5">
+                    <span ><i class="fa fa-spinner fa-spin fa-3x"></i></span>
+                    <p>Loading</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        
+    </div>
+</div>

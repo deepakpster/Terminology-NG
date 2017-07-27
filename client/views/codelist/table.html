@@ -1,0 +1,60 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table ng-table="tableParams" class="table table-condensed table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Extensible(Yes/No)</th>
+                        <th>Definition</th>
+                        <th>NCI Terminology</th>
+                        <th>Submission Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cl in $data.documents">
+                        <td><a ui-sref="app.codeterm({ key: clkey, codeId: cl.code })">{{ cl.code }}</a></td>
+                        <td>{{ cl.clname }}</td>
+                        <td>{{ cl.clext }}</td>
+                        <td>{{ cl.definition }}</td>
+                        <td>{{ cl.nciterm }}</td>
+                        <td>{{ cl.subval }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-show="tableParams.settings().$loading" class="container-fluid">
+            <div class="row-fluid">
+                <div class="col-md-6 col-md-offset-5">
+                    <span ><i class="fa fa-spinner fa-spin fa-3x"></i></span>
+                    <p>Loading</p>
+                </div>
+            </div>
+        </div>
+        <div ng-show="tableParams.data.totalPages==0" class="container-fluid">
+            <div class="row-fluid">
+                <div class="col-md-6 col-md-offset-5">
+                    <p>No Codelist available</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col col-xs-4">Page 1 of 5
+            </div>
+            <div class="col col-xs-8">
+                <ul class="pagination pagination-sm pull-right">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

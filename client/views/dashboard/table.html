@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Terminology List</strong></div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-condensed table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Group</th>
+                        <th>Total</th>
+                        <th>Created On</th>
+                        <th>Updated On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="ct in ctlist.documents">
+                        <td><a ui-sref="app.codelist({ key: ct.key })">{{ ct.name }}</a></td>
+                        <td>{{ ct.group }}</td>
+                        <td>{{ ct.total }}</td>
+                        <td>{{getDate(ct.createdon)}} </td>
+                        <td>{{getDate(ct.updatedon)}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col col-xs-4">Page 1 of 5
+            </div>
+            <div class="col col-xs-8">
+                <ul class="pagination pagination-sm pull-right">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
